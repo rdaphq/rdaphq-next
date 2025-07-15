@@ -1,14 +1,31 @@
 nav {
     width: 100%;
-    border-bottom: 1px solid #ffffff20;
+    background: #0a0a0a;
+    transition: border .2s ease;
+    border-bottom: 1px solid transparent;
+    
+    &.scrolled {
+        border-bottom-color: #ffffff20;
+    }
 }
 
 .nav-container {
-    padding: 1rem 2rem;
+    padding: 1rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @media (width < 1440px) {
+        padding: 1rem 2rem;
+    }
 }
 
 .nav-links {
+    @media (width < 768px) {
+        display: none;
+    }
+
     a {
+        font-size: .85rem;
         color: #aaa;
     }
     a:hover {
@@ -17,17 +34,20 @@ nav {
 }
 
 .nav-button {
-    color: #fff;
+    color: #aaa;
     overflow: hidden;
+    font-size: .9rem;
+    font-weight: 700;
     position: relative;
     padding: .4rem 1rem;
-    border-radius: 3rem;
-    border: 1px solid #fff;
-    transition: color .3s ease-in-out, transform .3s ease-in-out;
+    border-radius: .5rem;
+    border: 1px solid #ffffff20;
+    transition: color .4s ease-in-out, transform .3s ease-in-out, border-color .3s ease-in-out;
 
     &:hover {
         color: #111;
-        transform: translateY(-2px);
+        border-color: transparent;
+        /* transform: translateY(-3px); */
 
         &::before {
             left: 0;
@@ -44,5 +64,15 @@ nav {
         width: 100%;
         left: -100%;
         top: 0;
+    }
+}
+
+.nav-burger {
+    line-height: 0;
+    font-size: 1.3rem;
+    color: #aaa;
+
+    @media (width > 768px) {
+        display: none;
     }
 }
