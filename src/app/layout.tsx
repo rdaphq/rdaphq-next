@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter_Tight } from 'next/font/google';
 import './globals.css';
+import './fonts.css'
 
 const interTight = Inter_Tight({
   display: 'swap',
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   publisher: 'Rdap',
 };
 
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar/navbar';
 import Splash from '../components/splash/splash';
 
 export default function RootLayout({

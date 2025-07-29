@@ -2,15 +2,11 @@
 
 import Image from 'next/image';
 import { useEffect } from 'react';
-import Logo from '../../public/rdap-iso.svg';
+import Logo from '../../../public/rdap-iso.svg';
 import './navbar.css';
 
 function Navbar() {
     const navLinks = [
-        {
-            name: 'Home',
-            path: '/'
-        },
         {
             name: 'Music',
             path: '/music'
@@ -50,8 +46,8 @@ function Navbar() {
     return (
         <nav id='nav' className='nav sticky top-0 z-50'>
             <div className='nav-container flex items-center justify-between'>
-                <div className='nav-wrapper flex items-center gap-6'>
-                    <div className='nav-brand'>
+                <div className='nav-wrapper flex items-center gap-10'>
+                    <div className='nav-brand brightness-100 hover:brightness-50'>
                         <a href='/'>
                             <Image
                                 className='w-8'
@@ -61,7 +57,7 @@ function Navbar() {
                             />
                         </a>
                     </div>
-                    <div className='nav-links flex items-center gap-8 text-gray-400'>
+                    <div className='nav-links flex items-center gap-9'>
                         {navLinks.map((link, index) => (
                             <div key={index}>
                                 <a href={link.path} aria-label={link.name}>{link.name}</a>

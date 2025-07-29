@@ -1,12 +1,12 @@
 import Image from 'next/image';
-import Hero from '../components/hero';
-import Content from '../components/content';
+import Hero from '../components/hero/hero';
+import Since from '../components/since/since';
 
 export default function Home() {
   return (
     <>
     <Hero />
-    <Content />
+    <Since />
 
     <div className='h-screen'></div>
     </>
