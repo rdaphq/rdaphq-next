@@ -1,4 +1,4 @@
-.since {
+.quote {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -8,7 +8,7 @@
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     background: linear-gradient(to bottom, #ffffff80, #ffffff20);
     background-clip: text;
     color: transparent;

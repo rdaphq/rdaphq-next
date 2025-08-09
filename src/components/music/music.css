@@ -1,0 +1,13 @@
+.music-items {
+    scrollbar-width: none;
+}
+
+.music-items::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: auto;
+    position: fixed;
+    background: linear-gradient(to right, #0a0a0a 20%, transparent);
+}

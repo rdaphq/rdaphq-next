@@ -45,3 +45,7 @@ body {
 .wrapper {
   padding: 0 1.5rem;
 }
+
+.rdap-small {
+  font-size: .615rem;
+}

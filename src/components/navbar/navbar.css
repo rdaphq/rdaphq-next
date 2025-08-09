@@ -20,16 +20,15 @@ nav {
 }
 
 .nav-links {
-
     @media (width < 768px) {
         display: none;
     }
 
     a {
-        font-size: .7rem;
         color: #ffffff70;
         text-transform: uppercase;
         letter-spacing: 3px;
+        padding: .5rem 0;
     }
     a:hover {
         color: #fff;
@@ -43,7 +42,7 @@ nav {
     position: relative;
     color: #ffffff70;
     padding: .4rem 1rem;
-    border-radius: .5rem;
+    border-radius: 2rem;
     border: 1px solid #ffffff20;
     transition: color .4s ease-in-out, transform .3s ease-in-out, border-color .3s ease-in-out;
 

@@ -10,7 +10,10 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: 'Rdap | RdapHQ - Official Website [@rdaphq]',
+  title: {
+    template: '%s | Rdap',
+    default: 'Rdap - Official Website [@rdaphq]'
+  },
   description: 'The official website for Rdap. Find everything about Rdap in one place.',
   openGraph: {
     title: 'Rdap | RdapHQ - Official Website [@rdaphq]',
@@ -33,25 +36,29 @@ export const metadata: Metadata = {
   publisher: 'Rdap',
 };
 
+import Favicon from '../../public/rdap-iso.svg'
+
 import Navbar from '../components/navbar/navbar';
 import Splash from '../components/splash/splash';
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+import { ReactLenis } from 'lenis/react';
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang='en'>
       <head>
+        <link rel="icon" href="../../public/rdap-iso.svg" />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
       </head>
       <body className={`${interTight.variable}`}>
-        <Splash />
-        <Navbar />
-        <div className='wrapper'>
-          {children}
-        </div>
+        <ReactLenis root options={{ lerp: 0.1, duration: 1.4, smoothWheel: true }}>
+          <Splash />
+          <Navbar />
+          <div className='wrapper'>
+            {children}
+          </div>
+        </ReactLenis>
       </body>
     </html>
   );

@@ -1,13 +1,13 @@
-import Image from 'next/image';
 import Hero from '../components/hero/hero';
-import Since from '../components/since/since';
+import Music from '../components/music/music';
+import Quote from '../components/quote/quote';
 
 export default function Home() {
   return (
     <>
     <Hero />
-    <Since />
-
+    <Music />
+    {/* <Quote /> */}
     <div className='h-screen'></div>
     </>
   );

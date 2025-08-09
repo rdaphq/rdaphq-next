@@ -1,6 +1,4 @@
 'use client'
-
-import Image from 'next/image';
 import './hero.css';
 
 import { useRef } from 'react';
@@ -38,7 +36,7 @@ function Hero () {
     });
 
     return (
-        <section className='hero h-[70vh]'>
+        <section className='hero h-[82vh]'>
             <div className='hero-container h-full flex items-center justify-center'>
                 <div className='hero-box'>
                     <h1 ref={titleRef} className='hero-title text-6xl text-balance tracking-tighter font-bold'>The art of everything.</h1>

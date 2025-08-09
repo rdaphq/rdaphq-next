@@ -57,23 +57,23 @@ function Navbar() {
                             />
                         </a>
                     </div>
-                    <div className='nav-links flex items-center gap-9'>
+                    <div className='nav-links flex items-center gap-10 '>
                         {navLinks.map((link, index) => (
                             <div key={index}>
-                                <a href={link.path} aria-label={link.name}>{link.name}</a>
+                                <a className='rdap-small' href={link.path} aria-label={link.name}>{link.name}</a>
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className='nav-wrapper flex items-center gap-4'>
                     <div className='nav-buttons hidden sm:flex items-center gap-4'>
-                        <div className='nav-button flex items-center gap-2'>
-                            <i className='fi fi-rr-handshake'></i>
+                        {/* <div className='nav-button flex items-center gap-2'>
                             <a href=''>Hire</a>
-                        </div>
+                            <i className='fi fi-rr-globe'></i>
+                        </div> */}
                         <div className='nav-button flex items-center gap-2'>
-                            <i className='fi fi-rr-heart'></i>
                             <a href=''>Support</a>
+                            <i className='fi fi-rr-heart'></i>
                         </div>
                     </div>
                     <div className='nav-burger'>
