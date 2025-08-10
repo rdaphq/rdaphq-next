@@ -15,21 +15,21 @@ export default async function Music() {
             <section className="music">
                 <div className="music-container pt-20 flex flex-col items-center justify-center w-full gap-6">
                     <div className="music-title w-full text-center">
-                        <span className='uppercase rdap-small tracking-[4px]'>Discover</span>
-                        <h2 className='font-bold text:5xl md:text-8xl'>Music</h2>
+                        <span className='uppercase rdap-small tracking-[4px] text-gray-300'>Discover</span>
+                        <h2 className='font-bold text-4xl md:text-8xl tracking-tight rdap-sans-alt'><span className='font-extralight rdap-mono italic mr-1 md:mr-3'>M</span>usic</h2>
                     </div>
 
                     <div className="music-border flex flex-col items-center justify-start w-full">
-                        <div className="music-items relative flex items-start justify-start gap-4 w-full overflow-x-auto snap-x snap-mandatory">
+                        <div className="music-items relative flex items-stretch xl:items-center justify-start xl:justify-center xl:flex-wrap gap-4 w-full overflow-x-auto snap-x snap-mandatory">
                             {albums.map((album) => (
-                                <div key={album.id} className="w-90 music-item rounded-3xl overflow-clip border border-white/4 shrink-0 snap-center">
+                                <div key={album.id} className="flex flex-col items-center md:items-start w-60 md:w-96 music-item rounded-2xl md:rounded-3xl overflow-clip border border-white/4 shrink-0 snap-center">
                                     <img className='w-full' src={album.images[0].url} alt={`${album.name}`} />
-                                    <div className="py-2 px-4">
-                                        <h3 className='font-medium tracking-tighter'>{album.name}</h3>
-                                        <span className='rdap-small text-white/40 mt-2'>{album.release_date.slice(0, 4)}</span>
+                                    <div className="py-2 px-4 h-full flex flex-col justify-between gap-1">
+                                        <h3 className='text-white/70 font-medium tracking-tight truncate'>{album.name}</h3>
+                                        <span className='rdap-short text-white/40'>{album.release_date.slice(0, 4)}</span>
                                     </div>
                                 </div>
-                            )).slice(0, 10)}
+                            )).slice(0, 6)}
                         </div>
                     </div>
                 </div>

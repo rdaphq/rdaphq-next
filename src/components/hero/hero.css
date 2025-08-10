@@ -7,6 +7,10 @@
 
     max-width: 1400px;
     margin: 0 auto;
+
+    @media (width < 1442px) {
+        padding: 0 1.5rem;
+    }
 }
 
 .hero-container {
@@ -17,7 +21,21 @@
     background-position: center;
     background-size: cover;
     border-radius: 1.5rem;
+    cursor: none;
     width: 100%;
+}
+
+.hero-cursor {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    pointer-events: none;
+    transform: translate(-60%, -80%);
+    transition: transform .1s ease;
+    background-color: #00000010;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: none;
 }
 
 .hero-title {
@@ -26,7 +44,7 @@
 
 .hero-buttons {
     left: 50%;
-    margin-top: 1.5rem;
+    margin-top: 1.2rem;
     position: absolute;
     transform: translate(-50%, 0);
 }
@@ -34,6 +52,7 @@
 .hero-button {
     color: #fff;
     line-height: 1;
+    cursor: pointer;
     overflow: hidden;
     font-weight: 700;
     font-size: .9rem;
@@ -51,7 +70,7 @@
         color: #111;
 
         &:hover {
-            background-color: #ddd;
+            background-color: #ccc;
         }
     }
 

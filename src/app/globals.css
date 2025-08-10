@@ -42,10 +42,22 @@ body {
   line-height: 0;
 }
 
-.wrapper {
-  padding: 0 1.5rem;
-}
-
 .rdap-small {
   font-size: .615rem;
+}
+
+.rdap-short {
+  font-size: .7rem;
+}
+
+.rdap-mono {
+  font-family: 'Geist Mono', monospace;
+}
+
+.rdap-sans {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.rdap-sans-alt {
+  font-family: 'Questrial', sans-serif;
 }

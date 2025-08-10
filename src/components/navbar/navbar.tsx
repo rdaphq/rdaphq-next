@@ -46,7 +46,7 @@ function Navbar() {
     return (
         <nav id='nav' className='nav sticky top-0 z-50'>
             <div className='nav-container flex items-center justify-between'>
-                <div className='nav-wrapper flex items-center gap-10'>
+                <div className='nav-wrapper rdap-sans-alt flex items-center gap-10'>
                     <div className='nav-brand brightness-100 hover:brightness-50'>
                         <a href='/'>
                             <Image
@@ -72,7 +72,7 @@ function Navbar() {
                             <i className='fi fi-rr-globe'></i>
                         </div> */}
                         <div className='nav-button flex items-center gap-2'>
-                            <a href=''>Support</a>
+                            <a className='font-normal' href='/paypal'>Support</a>
                             <i className='fi fi-rr-heart'></i>
                         </div>
                     </div>
