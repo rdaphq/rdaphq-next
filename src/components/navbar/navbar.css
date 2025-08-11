@@ -1,11 +1,14 @@
 nav {
     width: 100%;
     background: #0a0a0a;
-    transition: border .2s ease;
     border-bottom: 1px solid transparent;
     
     &.scrolled {
-        border-bottom-color: #ffffff20;
+        border-bottom-color: #ffffff12;
+
+        .nav-brand img {
+            width: 3rem;
+        }
     }
 }
 
@@ -17,6 +20,14 @@ nav {
     @media (width < 1440px) {
         padding: 1rem 2rem;
     }
+}
+
+nav, .nav-brand img, .nav-container {
+    transition: all .4s ease;
+}
+
+.nav-brand img {
+    width: 4rem;
 }
 
 .nav-links {

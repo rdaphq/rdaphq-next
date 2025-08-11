@@ -1,0 +1,56 @@
+.divider-line {
+    width: 1px;
+    height: 200px;
+    position: relative;
+    background: linear-gradient(to bottom, transparent, #ffffff60);
+
+    &.alt {
+        background: linear-gradient(to top, transparent, #ffffff60);
+    }
+}
+
+.divider-core {
+    width: 99px;
+    padding: 2rem;
+    border-radius: 50%;
+    position: relative;
+
+    /* background-image:
+    linear-gradient(to right, #ffffff10 1px, transparent 1px),
+    linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+
+    background-size: 1.5rem 1.5rem; */
+    background-color: #0a0a0a;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    z-index: -1;
+    width: 101px;
+    height: 101px;
+    position: absolute;
+    border-radius: 50%;
+    animation: 3s spin linear infinite;
+
+    background-image: conic-gradient(from var(--angle), #ffffff08 80%, #fff);
+}
+
+.divider::before {
+    filter: blur(2px);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}

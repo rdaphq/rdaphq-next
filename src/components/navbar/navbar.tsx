@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect } from 'react';
-import Logo from '../../../public/rdap-iso.svg';
+import Logo from '../../../public/rdap.png';
 import './navbar.css';
 
 function Navbar() {
@@ -15,13 +15,17 @@ function Navbar() {
             name: 'Merch',
             path: '/shop'
         },
-        {
-            name: 'Services',
-            path: '/services'
-        },
+        // {
+        //     name: 'Services',
+        //     path: '/services'
+        // },
         {
             name: 'Portfolio',
             path: '/portfolio'
+        },
+        {
+            name: 'Discord',
+            path: '/discord'
         }
     ];
 
@@ -46,40 +50,39 @@ function Navbar() {
     return (
         <nav id='nav' className='nav sticky top-0 z-50'>
             <div className='nav-container flex items-center justify-between'>
-                <div className='nav-wrapper rdap-sans-alt flex items-center gap-10'>
+                <div className='nav-wrapper flex items-center gap-10'>
                     <div className='nav-brand brightness-100 hover:brightness-50'>
                         <a href='/'>
                             <Image
-                                className='w-8'
                                 src={Logo}
                                 alt='Rdap Logo'
                                 priority
                             />
                         </a>
                     </div>
-                    <div className='nav-links flex items-center gap-10 '>
-                        {navLinks.map((link, index) => (
-                            <div key={index}>
-                                <a className='rdap-small' href={link.path} aria-label={link.name}>{link.name}</a>
-                            </div>
-                        ))}
-                    </div>
                 </div>
-                <div className='nav-wrapper flex items-center gap-4'>
+                <div className='nav-links rdap-sans-alt flex items-center gap-10 '>
+                    {navLinks.map((link, index) => (
+                        <div key={index}>
+                            <a className='rdap-small' href={link.path} aria-label={link.name}>{link.name}</a>
+                        </div>
+                    ))}
+                </div>
+                <div className='nav-burger'>
+                    <i className='fi fi-rr-menu-burger'></i>
+                </div>
+                {/* <div className='nav-wrapper flex items-center gap-4'>
                     <div className='nav-buttons hidden sm:flex items-center gap-4'>
-                        {/* <div className='nav-button flex items-center gap-2'>
+                        <div className='nav-button flex items-center gap-2'>
                             <a href=''>Hire</a>
                             <i className='fi fi-rr-globe'></i>
-                        </div> */}
+                        </div>
                         <div className='nav-button flex items-center gap-2'>
                             <a className='font-normal' href='/paypal'>Support</a>
                             <i className='fi fi-rr-heart'></i>
                         </div>
                     </div>
-                    <div className='nav-burger'>
-                        <i className='fi fi-rr-menu-burger'></i>
-                    </div>
-                </div>
+                </div> */}
             </div>
         </nav>
     )

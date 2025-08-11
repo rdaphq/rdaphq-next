@@ -3,13 +3,22 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-inline: 1.5rem;
     text-align: center;
-
-    max-width: 1400px;
     margin: 0 auto;
 
-    @media (width < 1442px) {
-        padding: 0 1.5rem;
+    @media (width < 640px) {
+        padding: 0;
+    }
+}
+
+@media (width < 640px) {
+    .hero {
+        padding: 0;
+    }
+
+    .hero-container {
+        border-radius: 0;
     }
 }
 
@@ -21,8 +30,12 @@
     background-position: center;
     background-size: cover;
     border-radius: 1.5rem;
-    cursor: none;
+    /* cursor: none; */
     width: 100%;
+
+    @media (width < 640px) {
+        border-radius: 0;
+    }
 }
 
 .hero-cursor {

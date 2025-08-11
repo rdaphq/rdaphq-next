@@ -15,12 +15,10 @@ export default async function AlbumsPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-4">
-      <h1 className="text-4xl md:text-6xl font-bold mb-12 text-center md:text-left">
-        Discography
-      </h1>
+      <h1 className='font-bold text-4xl md:text-7xl tracking-tight rdap-sans-alt mb-12'><span className='font-extralight rdap-mono italic mr-1 md:mr-2'>D</span>iscography</h1>
 
       <section className="mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
           {albums.map((album) => (
             <div key={album.id} className="">
               {album.images[0] && (
@@ -28,7 +26,7 @@ export default async function AlbumsPage() {
                   <img
                     src={album.images[0].url}
                     alt={album.name}
-                    className="w-full aspect-square object-cover mb-2 rounded"
+                    className="w-full aspect-square object-cover mb-2 rounded-md md:rounded-xl"
                   />
                 </a>
               )}

@@ -1,0 +1,25 @@
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-items {
+    padding: 0 1.5rem;
+    scrollbar-width: none;
+}
+
+.video-items::before {
+    content: '';
+    top: 0;
+    left: 0;
+    width: 15vw;
+    height: auto;
+    position: fixed;
+    background: linear-gradient(to right, #0a0a0a 20%, transparent);
+}
