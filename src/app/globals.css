@@ -61,3 +61,11 @@ body {
 .rdap-sans-alt {
   font-family: 'Questrial', sans-serif;
 }
+
+.rdapClerkLogin {
+  line-height: 1;
+}
+
+.rdapClerkProfile {
+  line-height: 0;
+}

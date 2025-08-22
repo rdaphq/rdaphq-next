@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import Logo from '../../../public/rdap.png';
 import './navbar.css';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 
 function Navbar() {
     const navLinks = [
@@ -61,12 +62,24 @@ function Navbar() {
                         </a>
                     </div>
                 </div>
-                <div className='nav-links rdap-sans-alt flex items-center gap-10 '>
+                <div className='nav-links rdap-sans-alt flex items-center gap-10'>
                     {navLinks.map((link, index) => (
                         <div key={index}>
                             <a className='rdap-small' href={link.path} aria-label={link.name}>{link.name}</a>
                         </div>
                     ))}
+                    <div className='rdapClerk' key='rdapClerk'>
+                    <SignedOut>
+                        <SignInButton>
+                            <button className='rdapClerkLogin text-[.7rem] uppercase bg-white/10 text-white/40 py-2 px-4 rounded-full cursor-pointer hover:bg-white/20 hover:text-white transition-all duration-200'>SIGN IN</button>
+                        </SignInButton>
+                    </SignedOut>
+                    <SignedIn>
+                        <div className='rdapClerkProfile'>
+                            <UserButton />
+                        </div>
+                    </SignedIn>
+                </div>
                 </div>
                 <div className='nav-burger'>
                     <i className='fi fi-rr-menu-burger'></i>
