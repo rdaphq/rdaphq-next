@@ -35,37 +35,18 @@ export default function Hero () {
         })
     });
 
-    // useEffect(() => {
-    //     const heroCursor = document.getElementById('heroCursor');
-    //     const heroContainer = document.getElementById('heroContainer');
-
-    //     if (heroContainer) {
-    //         heroContainer.addEventListener('mouseenter', () => {
-    //             if (heroCursor) {
-    //                 heroCursor.style.display === 'none' ? heroCursor.style.display = 'block' : heroCursor.style.display = 'block';
-    //             }
-    //         });
-
-    //         heroContainer.addEventListener('mouseleave', () => {
-    //             if (heroCursor) {
-    //                 heroCursor.style.display === 'block' ? heroCursor.style.display = 'none' : heroCursor.style.display = 'none';
-    //             }
-    //         });
-
-    //         heroContainer.addEventListener('mousemove', (event) => {
-    //             const { clientX, clientY } = event;
-
-    //             if (heroCursor) {
-    //                 heroCursor.style.left = `${clientX}px`;
-    //                 heroCursor.style.top = `${clientY}px`;
-    //             }
-    //         });
-    //     }
-    // }, [])
-
-    useEffect(() => {
+    function exploreScroll () {
         const explorePoint = document.getElementById('explore');
-    })
+        if (explorePoint) {
+            const offset = 20;
+            window.scrollTo({ 
+                behavior: 'smooth',
+                top: explorePoint.offsetTop - offset 
+            });
+        } else {
+            console.error('Element with ID "explore" not found');
+        }
+    }
 
     return (
         <section className='hero h-[76vh] sm:h-[62vh]'>
@@ -75,7 +56,7 @@ export default function Hero () {
                 <div className='hero-box z-2'>
                     <h1 ref={titleRef} className='hero-title text-5xl md:text-6xl text-balance tracking-tighter font-bold'>The art of everything.</h1>
                     <div ref={buttonsRef} className='hero-buttons flex items-center justify-center gap-3'>
-                        <div className='hero-button flex items-center gap-2'>
+                        <div onClick={exploreScroll} className='hero-button flex items-center gap-2'>
                             <p><i className='fi fi-rr-arrow-small-down'></i></p> Explore
                         </div>
 

@@ -30,9 +30,11 @@ export default async function AlbumsPage() {
                   />
                 </a>
               )}
-              <h3 className="tracking-tighter font-medium truncate">
+              <a href={album.external_urls.spotify}>
+                <h3 className="tracking-tighter font-medium truncate">
                 {album.name}
               </h3>
+              </a>
               <p className="text-sm text-gray-600">
                 {new Date(album.release_date).getFullYear()}
               </p>

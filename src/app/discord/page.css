@@ -1,0 +1,40 @@
+.discord {
+    user-select: none;
+}
+
+.discord-container {
+    border: 1px solid #ffffff06;
+    background: linear-gradient(340deg, #ffffff09, transparent 50%);
+    backdrop-filter: blur(10px);
+    animation: float 1.5s ease-in-out both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.discord-join {
+    font-size: .9rem;
+    font-weight: 600;
+    width: fit-content;
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+    background-color: #5865f2;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.discord-join:hover {
+    background-color: #ccc;
+    color: #111;
+}
