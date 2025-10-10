@@ -2,6 +2,8 @@ import Hero from '../components/hero/hero';
 import Music from '../components/music/music';
 import Video from '../components/video/video';
 import About from '../components/about/about';
+import Merch from '../components/merch/merch';
+import Tickets from '../components/tickets/tickets';
 import Quote from '../components/quote/quote';
 
 import Divider from '../components/divider/divider';
@@ -14,9 +16,11 @@ export default function Home() {
     <Hero />
     { env === 'DESIGN' ? '' : <Music /> }
     <Video />
-    <Divider />
-    <About />
-    {/* <Quote /> */}
+    <Merch />
+    <Tickets />
+    {/* <About /> */}
+    {/* <Divider /> */}
+    <Quote />
     </>
   );
 }

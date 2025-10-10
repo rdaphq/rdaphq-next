@@ -49,13 +49,12 @@ export default function Hero () {
     }
 
     return (
-        <section className='hero h-[76vh] sm:h-[62vh]'>
+        <section className='hero h-[80vh] 2xl:h-[76vh]'>
             <div id='heroContainer' className='hero-container overflow-clip h-full flex items-center justify-center'>
-                {/* <div id='heroCursor' className="hero-cursor"></div> */}
 
-                <div className='hero-box z-2'>
-                    <h1 ref={titleRef} className='hero-title text-5xl md:text-6xl text-balance tracking-tighter font-bold'>The art of everything.</h1>
-                    <div ref={buttonsRef} className='hero-buttons flex items-center justify-center gap-3'>
+                <div className='hero-box z-2 px-4'>
+                    <h1 ref={titleRef} className='hero-title text-balance rdap-sans-alt tracking-tight font-bold'>The art of everything.</h1>
+                    <div ref={buttonsRef} className='hero-buttons flex flex-col sm:flex-row items-center justify-center gap-3'>
                         <div onClick={exploreScroll} className='hero-button flex items-center gap-2'>
                             <p><i className='fi fi-rr-arrow-small-down'></i></p> Explore
                         </div>

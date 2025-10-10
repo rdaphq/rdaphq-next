@@ -58,51 +58,25 @@ import Navbar from '../components/navbar/navbar';
 import Splash from '../components/splash/splash';
 
 import { ReactLenis } from 'lenis/react';
-import { ClerkProvider } from '@clerk/nextjs';
 
 const env = process.env.ENVIROMENT;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
-  // if (env === 'DEV') {
-  //   return (
-  //     <ClerkProvider>
-  //       <html lang='en'>
-  //         <head>
-  //           <link rel="icon" href="../../public/rdap-iso.svg" />
-  //           <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
-  //           <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
-  //         </head>
-  //         <body className={`${interTight.variable} ${geistMono.variable} ${questrial.variable}`}>
-  //           <ReactLenis root options={{ lerp: 0.1, duration: 1.4, smoothWheel: true }}>
-  //             <Navbar />
-  //             <div className='wrapper'>
-  //               {children}
-  //             </div>
-  //           </ReactLenis>
-  //         </body>
-  //       </html>
-  //     </ClerkProvider>
-  //   );
-  // }
-
   return (
-    <ClerkProvider>
-      <html lang='en'>
-        <head>
-          <link rel="icon" href="../../public/rdap-iso.svg" />
-          <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'></link>
-          <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
-        </head>
-        <body className={`${interTight.variable} ${geistMono.variable} ${questrial.variable}`}>
-          { env === 'DESIGN' ? '' : <Splash /> }
-          <ReactLenis root options={{ lerp: 0.1, duration: 1.4, smoothWheel: true }}>
-            <Navbar />
-            <div className='wrapper'>
-              {children}
-            </div>
-          </ReactLenis>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang='en'>
+      <head>
+        <link rel="icon" href="../../public/rdap-iso.svg" />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
+      </head>
+      <body className={`${interTight.variable} ${geistMono.variable} ${questrial.variable}`}>
+        {/* { env === 'DESIGN' ? '' : <Splash /> } */}
+        <ReactLenis root options={{ lerp: 0.1, duration: 1.4, smoothWheel: true }}>
+          <Navbar />
+          <div className='wrapper'>
+            {children}
+          </div>
+        </ReactLenis>
+      </body>
+    </html>
   );
 }

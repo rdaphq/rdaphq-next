@@ -13,7 +13,7 @@ export default async function Music() {
     return (
         <>
             <section id='explore' className="music">
-                <div className="music-container py-20 flex flex-col items-center justify-center w-full gap-6">
+                <div className="music-container pt-20 flex flex-col items-center justify-center w-full gap-6">
                     <div className="music-title text-center">
                         <span className='uppercase rdap-small tracking-[4px] text-gray-300'>Latest</span>
                         <h2 className='font-bold text-5xl md:text-8xl tracking-tight rdap-sans-alt'><span className='font-extralight rdap-mono italic mr-1 md:mr-3'>M</span>usic</h2>

@@ -7,9 +7,9 @@
     margin: 0 auto;
 }
 
-h3 {
+.thequote {
     font-size: 1rem;
-    background: linear-gradient(to bottom, #ffffff80, #ffffff20);
+    background: linear-gradient(to bottom, #ffffffaa, #ffffff50);
     background-clip: text;
     color: transparent;
 }
