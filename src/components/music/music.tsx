@@ -22,7 +22,7 @@ export default async function Music() {
                     <div className="music-items relative flex items-stretch xl:items-center justify-start xl:justify-center xl:flex-wrap gap-4 w-full overflow-x-auto snap-x snap-mandatory">
                         {albums.map((album) => (
                             <a key={album.id} href={album.external_urls.spotify}>
-                                <div className="flex flex-col items-center md:items-start w-66 md:w-96 music-item rounded-2xl md:rounded-3xl overflow-clip border border-white/4 shrink-0 snap-center">
+                                <div className="flex flex-col items-center md:items-start w-66 md:w-96 music-item rounded-2xl md:rounded-3xl overflow-clip border border-white/10 shrink-0 snap-center">
                                     <img className='w-full' src={album.images[0].url} alt={`${album.name}`} />
                                     <div className="py-2 px-4 h-full flex flex-col justify-between gap-1">
                                         <h3 className='text-white/70 font-medium tracking-tight truncate'>{album.name}</h3>

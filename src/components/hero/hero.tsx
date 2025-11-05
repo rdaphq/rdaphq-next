@@ -49,8 +49,8 @@ export default function Hero () {
     }
 
     return (
-        <section className='hero h-[80vh] 2xl:h-[76vh]'>
-            <div id='heroContainer' className='hero-container overflow-clip h-full flex items-center justify-center'>
+        <section className='hero h-[70vh] 2xl:h-[60vh]'>
+            <div id='heroContainer' className='hero-container max-w-[1400px] overflow-clip h-full flex items-center justify-center'>
 
                 <div className='hero-box z-2 px-4'>
                     <h1 ref={titleRef} className='hero-title text-balance rdap-sans-alt tracking-tight font-bold'>The art of everything.</h1>

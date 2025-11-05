@@ -42,7 +42,7 @@ export default function Merch() {
                             <div key={index} className="merch-item flex flex-col items-center justify-center gap-2">
                                 <div className="merch-images">
                                     {product.images.map((image, index) => (
-                                        <Link href={product.url}><Image key={index} src={image.url} alt={`Product Image ${index}`} className="merch-image" /></Link>
+                                        <Link key={index} href={product.url}><Image src={image.url} alt={`Product Image ${index}`} className="merch-image" /></Link>
                                     ))}
                                 </div>
                                 <Link href={product.url}><h3 className="text-zinc-800 rdap-mono text-center">{product.name}</h3></Link>

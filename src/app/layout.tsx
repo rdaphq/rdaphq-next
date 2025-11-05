@@ -1,26 +1,6 @@
 import type { Metadata } from 'next';
-import { Inter_Tight, Geist_Mono, Questrial } from 'next/font/google';
 import './globals.css';
 import './fonts.css'
-
-const interTight = Inter_Tight({
-  display: 'swap',
-  variable: '--font-inter-tight',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  display: 'swap',
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
-
-const questrial = Questrial({
-  display: 'swap',
-  variable: '--font-questrial',
-  subsets: ['latin'],
-  weight: '400'
-});
 
 export const metadata: Metadata = {
   title: {
@@ -58,22 +38,27 @@ import Navbar from '../components/navbar/navbar';
 import Splash from '../components/splash/splash';
 
 import { ReactLenis } from 'lenis/react';
+import Footer from '@/components/footer/footer';
 
 const env = process.env.ENVIROMENT;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
+  const year = new Date().getFullYear();
+  
   return (
     <html lang='en'>
       <head>
         <link rel="icon" href="../../public/rdap-iso.svg" />
         <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css' />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css' />
       </head>
-      <body className={`${interTight.variable} ${geistMono.variable} ${questrial.variable}`}>
-        {/* { env === 'DESIGN' ? '' : <Splash /> } */}
+      <body>
+        { env === 'DESIGN' ? '' : <Splash /> }
         <ReactLenis root options={{ lerp: 0.1, duration: 1.4, smoothWheel: true }}>
           <Navbar />
           <div className='wrapper'>
             {children}
+            <Footer />
           </div>
         </ReactLenis>
       </body>

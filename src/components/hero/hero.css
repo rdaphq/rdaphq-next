@@ -29,8 +29,7 @@
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    border-radius: 1.5rem;
-    /* cursor: none; */
+    border-radius: 1rem;
     width: 100%;
 
     @media (width < 640px) {
@@ -39,7 +38,9 @@
 }
 
 .hero-title {
+    line-height: 1;
     font-size: 6rem;
+    margin-bottom: 2rem;
     text-shadow: 0 0 .5rem #00000040;
 
     @media (width < 500px) {

@@ -5,7 +5,10 @@ const nextConfig: NextConfig = {
     domains: ['i.scdn.co'],
     unoptimized: true
   },
-  output: 'export'
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'out',
+  
 };
 
 export default nextConfig;

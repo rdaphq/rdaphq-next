@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
+    "export": "next build && next export",
+    "static-export": "next build && node fix-paths.js",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,7 +14,7 @@
     "@gsap/react": "^2.1.2",
     "gsap": "^3.13.0",
     "lenis": "^1.3.8",
-    "next": "15.3.3",
+    "next": "^15.5.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
